@@ -1,0 +1,10 @@
+{
+  "backend_url": "https://fxvisionapp.com",
+  "broker_url": "https://broker-qx.pro",
+  "allowlist": ["qxbroker.com", "quotex.io", "market-qx.pro", "broker-qx.pro", "broker-qx.net", "broker-qx.trade"],
+  "indicator_url": "https://raw.githubusercontent.com/lebnolix/kingvision/master/scripts/indicator.js",
+  "indicator_key": "56d73c0b2f770db99d45978bcd9d094fe5587b24",
+  "features": [
+    { "key": "access", "name": "VIP Access", "free": false }
+  ]
+}
