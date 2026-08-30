@@ -1,0 +1,7 @@
+*
+!resources/
+!resources/app/
+!resources/app/**
+!resources/app-config.json
+!resources/indicator.js
+!.gitignore

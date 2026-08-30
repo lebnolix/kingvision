@@ -1,0 +1,8 @@
+{
+  "name": "fxvision-windows",
+  "version": "1.0.0",
+  "description": "FX Vision — Windows desktop (secure broker session + indicator)",
+  "main": "src/main.js",
+  "author": "FX Vision",
+  "license": "UNLICENSED"
+}
