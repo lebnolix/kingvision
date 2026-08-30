@@ -6,7 +6,7 @@ $('reload').onclick = () => window.fxv.reload()
 
 const st = $('status')
 window.fxv.onStatus((s) => {
-  if (s.ok) { st.className = 'status ok'; st.innerHTML = '<i class="dot"></i> Sessão segura · FX Vision' }
+  if (s.ok) { st.className = 'status ok'; st.innerHTML = '<i class="dot"></i> LIVE BOT WORKING' }
   else if (s.blocked) { st.className = 'status'; st.innerHTML = '<i class="dot"></i> Navegação bloqueada (fora da allowlist)' }
   else if (s.ok === false) { st.className = 'status err'; st.innerHTML = '<i class="dot"></i> Falha ao carregar (' + (s.detail || 'erro') + ')' }
 })
