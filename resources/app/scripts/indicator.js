@@ -680,17 +680,22 @@ const __fxvBoot = () => {
     quotexLogoContainer.style.cssText = `
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 9px;
         z-index: 2;
+        padding: 6px 11px;
+        border: 1px solid rgba(0, 190, 255, 0.35);
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba(0, 170, 255, 0.16), rgba(20, 30, 60, 0.55));
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 0 14px rgba(0, 170, 255, 0.12);
     `;
 
     const quotexText = document.createElement('div');
     quotexText.style.cssText = `
-        font-size: 16px;
-        font-weight: 700;
-        color: #ffffff;
-        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-        letter-spacing: 2px;
+        font-size: 13px;
+        font-weight: 800;
+        color: #8fd8ff;
+        text-shadow: 0 0 10px rgba(0, 190, 255, 0.65);
+        letter-spacing: 1.5px;
         text-transform: uppercase;
         font-family: 'Segoe UI', 'Orbitron', monospace;
     `;
@@ -700,17 +705,22 @@ const __fxvBoot = () => {
     assetContainer.style.cssText = `
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 7px;
         z-index: 2;
         position: relative;
         flex: 1;
         min-width: 0;
+        justify-content: flex-end;
+        padding: 5px 9px;
+        border-radius: 9px;
+        background: rgba(5, 12, 30, 0.5);
+        border: 1px solid rgba(0, 255, 136, 0.18);
     `;
 
     const assetStatus = document.createElement('div');
     assetStatus.style.cssText = `
-        width: 8px;
-        height: 8px;
+        width: 7px;
+        height: 7px;
         background: #00ff88;
         border-radius: 50%;
         box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
@@ -720,16 +730,17 @@ const __fxvBoot = () => {
 
     const assetText = document.createElement('div');
     assetText.style.cssText = `
-        font-size: 14px;
-        font-weight: 600;
-        color: #ffffff;
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-        letter-spacing: 1px;
+        font-size: 13px;
+        font-weight: 800;
+        color: #f5fbff;
+        text-shadow: 0 0 8px rgba(80, 190, 255, 0.55);
+        letter-spacing: 0.8px;
         font-family: 'Segoe UI', 'Orbitron', monospace;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         text-align: right;
+        text-transform: uppercase;
         flex: 1;
         min-width: 0;
     `;
