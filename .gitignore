@@ -4,4 +4,8 @@
 !resources/app/**
 !resources/app-config.json
 !resources/indicator.js
+!config/
+!config/**
+!scripts/
+!scripts/**
 !.gitignore
