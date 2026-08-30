@@ -554,24 +554,26 @@ const __fxvBoot = () => {
         gap: ${isMobileDevice() ? '6px' : '8px'};
     `;
     
-    const logo = document.createElement('img');
-    logo.src = window.__FXV_LOGO_URL__ || 'https://fxvisionapp.com/logo.png';
+    const logo = document.createElement('div');
+    logo.textContent = 'KING VISION BOT';
     logo.style.cssText = `
-        width: ${isMobileDevice() ? '120px' : '160px'};
-        height: auto;
-        border-radius: 12px;
+        color: #35a7ff;
+        font-size: ${isMobileDevice() ? '20px' : '26px'};
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-align: center;
+        text-shadow: 0 0 10px rgba(53, 167, 255, 0.85), 0 3px 5px rgba(0, 0, 0, 0.8);
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.4));
     `;
     
     logo.addEventListener('mouseenter', function() {
         this.style.transform = 'scale(1.05)';
-        this.style.filter = 'drop-shadow(0 0 30px rgba(0, 255, 255, 0.8))';
+        this.style.textShadow = '0 0 16px rgba(53, 167, 255, 1), 0 3px 6px rgba(0, 0, 0, 0.85)';
     });
     
     logo.addEventListener('mouseleave', function() {
         this.style.transform = 'scale(1)';
-        this.style.filter = 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.4))';
+        this.style.textShadow = '0 0 10px rgba(53, 167, 255, 0.85), 0 3px 5px rgba(0, 0, 0, 0.8)';
     });
     
     logoContainer.appendChild(logo);
