@@ -3054,14 +3054,14 @@ const __fxvBoot = () => {
         position: absolute;
         top: 14px;
         right: 16px;
-        background: linear-gradient(145deg, #35a7ff 0%, #0877d9 55%, #063b86 100%);
-        border: 1px solid rgba(143, 216, 255, 0.9);
-        color: #eaf8ff;
-        font-size: 24px;
+        background: linear-gradient(145deg, #174a7a 0%, #0b2d52 55%, #061a35 100%);
+        border: 1px solid rgba(83, 157, 214, 0.75);
+        color: #c9eaff;
+        font-size: 20px;
         line-height: 1;
-        width: 42px;
-        height: 42px;
-        border-radius: 13px;
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -3069,11 +3069,11 @@ const __fxvBoot = () => {
         transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         z-index: 20;
         font-weight: 900;
-        box-shadow: 0 0 18px rgba(53, 167, 255, 0.75), inset 0 1px 0 rgba(255,255,255,0.35), 0 4px 12px rgba(0,0,0,0.4);
+        box-shadow: 0 0 12px rgba(35, 111, 177, 0.65), inset 0 1px 0 rgba(255,255,255,0.2), 0 3px 10px rgba(0,0,0,0.5);
         animation: pulse 2.5s ease-in-out infinite;
     `;
-    minimizeButton.addEventListener('mouseenter', function(){ this.style.transform='scale(1.1)'; this.style.background='linear-gradient(145deg, #69c4ff 0%, #1689ed 55%, #0750a8 100%)'; this.style.boxShadow='0 0 28px rgba(53, 167, 255, 1), inset 0 1px 0 rgba(255,255,255,0.45), 0 5px 14px rgba(0,0,0,0.5)'; });
-    minimizeButton.addEventListener('mouseleave', function(){ this.style.transform='scale(1)'; this.style.background='linear-gradient(145deg, #35a7ff 0%, #0877d9 55%, #063b86 100%)'; this.style.boxShadow='0 0 18px rgba(53, 167, 255, 0.75), inset 0 1px 0 rgba(255,255,255,0.35), 0 4px 12px rgba(0,0,0,0.4)'; });
+    minimizeButton.addEventListener('mouseenter', function(){ this.style.transform='scale(1.08)'; this.style.background='linear-gradient(145deg, #25699f 0%, #104272 55%, #08264b 100%)'; this.style.boxShadow='0 0 20px rgba(35, 132, 211, 0.9), inset 0 1px 0 rgba(255,255,255,0.3), 0 4px 12px rgba(0,0,0,0.55)'; });
+    minimizeButton.addEventListener('mouseleave', function(){ this.style.transform='scale(1)'; this.style.background='linear-gradient(145deg, #174a7a 0%, #0b2d52 55%, #061a35 100%)'; this.style.boxShadow='0 0 12px rgba(35, 111, 177, 0.65), inset 0 1px 0 rgba(255,255,255,0.2), 0 3px 10px rgba(0,0,0,0.5)'; });
     minimizeButton.addEventListener('click', function(e){ e.stopPropagation(); minimizeOverlay(); });
     if (isMobileDevice()) {
         minimizeButton.addEventListener('touchend', function(e){ e.preventDefault(); e.stopPropagation(); minimizeOverlay(); });
