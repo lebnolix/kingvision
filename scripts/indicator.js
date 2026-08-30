@@ -1012,6 +1012,31 @@ const __fxvBoot = () => {
         return supabaseClient;
     }
 
+    async function fxvUpdateUserStatus() {
+        if (localStorage.getItem('fxv_status_consent') !== 'accepted' || !supabaseClient) return;
+        const { data, error } = await supabaseClient.auth.getSession();
+        if (error || !data.session || !data.session.user) return;
+        try {
+            await fetch(`${SUPABASE_URL}/functions/v1/update-user-status`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${data.session.access_token}`,
+                },
+                body: JSON.stringify({ user_id: data.session.user.id, status: 'online' }),
+            });
+        } catch (error) {
+            console.error('FXV status update failed', error);
+        }
+    }
+
+    function fxvRequestStatusConsent() {
+        if (localStorage.getItem('fxv_status_consent')) return;
+        const accepted = window.confirm('Kya aap online status aur hashed network identifier share karna chahte hain?');
+        localStorage.setItem('fxv_status_consent', accepted ? 'accepted' : 'declined');
+        if (accepted) fxvUpdateUserStatus();
+    }
+
     async function fetchSynchronizedSignal() {
         if (!isReading) {
             return;
@@ -3127,6 +3152,7 @@ const __fxvBoot = () => {
     }, 500);
     
     document.body.appendChild(overlay);
+    fxvRequestStatusConsent();
 
     const initialLang = detectQuotexLanguage();
     buttonText.textContent = messages[initialLang].turnOn;
