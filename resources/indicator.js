@@ -1000,7 +1000,7 @@ const __fxvBoot = () => {
     let speedometerInterval;
     let basePercentage = 0;
 
-    const SUPABASE_URL = 'https://uwtwqkdpufpjvpfinpas.supabase.co';
+    const SUPABASE_URL = 'https://ykicadwgybvdnaoullgq.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV3dHdxa2RwdWZwanZwZmlucGFzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE4MDQ5ODksImV4cCI6MjA5NzM4MDk4OX0.4yrc6-8g16cVyCMpBZQUPD4yzGuumQY2fPSTCeTDZuc';
 
     let supabaseClient = null;
@@ -1012,7 +1012,7 @@ const __fxvBoot = () => {
             return null;
         }
 
-        supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+        supabaseClient = supabase.createClient(SUPABASE_URL, 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlraWNhZHdneWJ2ZG5hb3VsbGdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc2NzA3MTMsImV4cCI6MjEwMzI0NjcxM30.2Tc_nQrfGa6n_H8fltvQ-xF7qWj16BTgYQ7KJRwu2MA', {
             global: {
                 headers: {
                     Authorization: `Bearer ${session.access_token}`
