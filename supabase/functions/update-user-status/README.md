@@ -8,7 +8,7 @@ Ye Edge Function raw IP ko database me save nahi karti. Request IP ko server-sid
 Supabase dashboard me Function secrets set karein:
 
 ```text
-SUPABASE_SERVICE_ROLE_KEY=<service role key>
+ADMIN_KEY=<service role key>
 IP_HASH_SALT=<random long secret>
 ```
 

@@ -31,7 +31,7 @@ Deno.serve(async (request) => {
     })
   }
 
-  const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
+  const serviceRoleKey = Deno.env.get('ADMIN_KEY')
   const ipSalt = Deno.env.get('IP_HASH_SALT')
   const supabaseUrl = Deno.env.get('SUPABASE_URL')
 
